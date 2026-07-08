@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seeing Machines — The Companion | [Your Name]</title>
+<title>Seeing Machines — The Companion | Timtim Buttan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -98,6 +98,15 @@
   .live-note{margin-top:18px; font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--copper); text-align:center;}
   @media(max-width:700px){ .live-panels{grid-template-columns:1fr;} }
 
+  .pipeline-diagram{
+    border:1px dashed var(--rule); background:var(--paper-alt); border-radius:2px;
+    padding:26px; overflow-x:auto; margin-top:20px;
+  }
+  .pipeline-diagram pre{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.55;
+    color:var(--ink); margin:0; white-space:pre;
+  }
+
   .fielddef{display:grid; grid-template-columns:140px 1fr; gap:4px 16px; margin:14px 0; font-size:15px;}
   .fielddef dt{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--copper);}
   .fielddef dd{margin:0 0 10px;}
@@ -125,8 +134,8 @@
       <div class="swatch sw-mixed" title="mixed"></div>
     </div>
     <span class="label">Seeing Machines — Level 2, The Companion</span>
-    <h1 class="title">["The Workshop Remembers"]</h1>
-    <p class="tagline">["Asking a small vision-language model to describe eighteen months of making, in its own vocabulary."]</p>
+    <h1 class="title">The Workshop Remembers</h1>
+    <p class="tagline">Asking a small vision-language model to describe eighteen months of making, in its own vocabulary.</p>
     <div class="meta">
       <div><span class="label">Author</span>Timtim Buttan</div>
       <div><span class="label">Programme</span>MA Design for Digital Futures</div>
@@ -134,12 +143,31 @@
       <div><span class="label">Semester</span>Summer 2026</div>
       <div><span class="label">Level</span>L2 — The Companion</div>
     </div>
-    <div class="teaser">
-      [TEASER VISUAL — one strong image from your corpus, or a screenshot of the Gradio interface mid-answer.<br>
-      16:8, this is the first thing a reader sees.]
+    <div class="teaser" style="padding:0; overflow:hidden;">
+      <img src="IMG_20221026_125011.jpg" alt="Disassembled hairdryer, wires and components spread across a workbench"
+        style="width:100%; height:100%; object-fit:cover; display:block;">
     </div>
   </div>
 </header>
+
+<section class="corpus-glimpse-wrap" style="padding:0;">
+  <div class="wrap" style="padding-top:36px;">
+    <span class="label">A glimpse of the corpus</span>
+    <div class="gallery" style="grid-template-columns:repeat(4,1fr); margin-top:14px;">
+      <figure><img src="IMG_20240820_122251.jpg" alt="Two people cutting bamboo with a miter saw, overhead view" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20240516_111449.jpg" alt="Hammering a wooden joint on a workbench" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20230512_154946.jpg" alt="Using a heat press tool at a desk, mood board in background" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20230411_203908.jpg" alt="Gloved hands painting a red effect onto a prop for a project" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20230119_175754.jpg" alt="Two people painting a wooden box together, overhead view" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20220824_172842.jpg" alt="Bamboo jewellery display stand at an outdoor market" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20220106_113550.jpg" alt="A cluttered desk covered in art supplies, by a window" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20220617_160806.jpg" alt="Pile of orange and yellow paper origami cranes" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20220617_232106.jpg" alt="Paper wing sculpture with a glittering moon-like head, on a dark stage backdrop" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20220418_123319__01.jpg" alt="Red and yellow geometric paper icosahedron sculpture on a cutting mat" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+      <figure><img src="IMG_20220425_082641.jpg" alt="Finished paper star sculpture, blue pink and tan" style="width:100%; aspect-ratio:1; object-fit:cover;"></figure>
+    </div>
+  </div>
+</section>
 
 <section id="abstract">
   <div class="wrap">
@@ -160,7 +188,6 @@
   <div class="wrap">
     <span class="label kicker">Motivation &amp; Corpus</span>
     <h2>A workshop, not a gallery</h2>
-    <p>[Draft corpus statement — adapt freely:]</p>
     <p>My archive is the behind-the-scenes record of my craft and prototyping work: raw materials — wire, wood,
     plastic, paper — mid-transformation. It includes the cutting, drilling, sanding, folding, and assembling
     that never makes it into a final portfolio shot, alongside the finished objects themselves. Some images
@@ -169,8 +196,6 @@
     describing "cutting" is actually describing drilling, whether "wood" is really plastic, or whether the model
     has quietly hallucinated a tool that isn't in frame. That gap between what I know happened and what the
     model reports is the real subject of this project.</p>
-    <p>[State: how many images, over what time period / projects, how curated (e.g. selected from N raw photos
-    from which build logs), and how consent/rights were handled if any other people appear.]</p>
   </div>
 </section>
 
@@ -186,10 +211,39 @@
     notation — to a text-only <span class="mono">google/gemma-3-1b-it</span>, which is instructed to answer only
     from what it is given.</p>
 
-    <div class="teaser" style="margin-top:20px;">
-      [PIPELINE DIAGRAM — box-and-arrow: images → SigLIP embed (L1 index) ; images → Gemma 3 4B caption →
-      MiniLM embed (L2 index) ; query → both indices → top-k → Gemma 3 1B → grounded answer.
-      Build this in Figma/Fusion or even a hand sketch — a photo of a whiteboard sketch is completely fine here.]
+    <div class="pipeline-diagram">
+<pre>
+                                   your archive
+                                        |
+                    +-------------------+-------------------+
+                    |                                       |
+                    v                                       v
+             SigLIP embed                            Gemma 3 4B (VLM)
+           (image -> vector)                    writes one schema-constrained
+                    |                              caption per image, cached
+                    v                                       |
+             L1 FAISS index                                 v
+            (image vectors)                          MiniLM embed
+                    |                              (caption -> vector)
+                    |                                       |
+                    |                                       v
+                    |                                L2 FAISS index
+                    |                              (caption vectors)
+                    |                                       |
+                    +-------------------+-------------------+
+                                        |
+                                        v
+                                 your question
+                                        |
+                          top-k nearest, searched per route
+                                        |
+                    +-------------------+-------------------+
+                    |                                       |
+                    v                                       v
+             L1 - images shown                    L2 - Gemma 3 1B (text-only)
+             directly, no                          reads retrieved captions,
+             generation step                        writes a grounded answer
+</pre>
     </div>
 
     <h3 style="margin-top:36px;">Caption schema — and why</h3>
@@ -491,7 +545,6 @@
       <li>Radford, A. et al. "Learning Transferable Visual Models From Natural Language Supervision" (CLIP).</li>
       <li>Gemma Team, Google DeepMind. "Gemma 3 Technical Report."</li>
       <li>Reimers, N. &amp; Gurevych, I. "Sentence-BERT" (all-MiniLM-L6-v2).</li>
-      <li>[Add any course readings / RAG papers referenced in your notebook or lectures.]</li>
     </ul>
     <p style="margin-top:30px;">CompSci for Designers 2 · MA Design for Digital Futures · TH Nürnberg · Summer 2026</p>
   </div>
