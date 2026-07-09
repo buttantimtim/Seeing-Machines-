@@ -31,7 +31,6 @@
   }
   h1,h2,h3{font-family:'Fraunces',serif; font-weight:600; margin:0 0 .3em; line-height:1.1;}
 
-  /* corner registration marks — a fabrication-drawing motif, reused as the signature element */
   .reg::before, .reg::after{
     content:""; position:absolute; width:14px; height:14px;
     border-top:1.5px solid var(--copper); border-left:1.5px solid var(--copper);
@@ -107,9 +106,6 @@
     color:var(--ink); margin:0; white-space:pre;
   }
 
-  /* Print-only static version of the Live Examples carousel: hidden on screen,
-     shown in place of the interactive version when printing/saving as PDF,
-     so a reader gets all ten paired examples instead of whichever one was on screen. */
   .print-only-examples{ display:none; }
   @media print {
     .live-examples{ display:none; }
@@ -159,6 +155,7 @@
       <div><span class="label">Course</span>CompSci for Designers 2 · TH Nürnberg</div>
       <div><span class="label">Semester</span>Summer 2026</div>
       <div><span class="label">Level</span>L2 — The Companion</div>
+      <div><span class="label">Notebook</span><a href="https://colab.research.google.com/drive/10AT1U5BtVIu_4j_EYqMSdokhKJ_Ie0Qc?usp=sharing" target="_blank" style="color:var(--copper);">Open in Colab</a></div>
     </div>
     <div class="teaser" style="padding:0; overflow:hidden;">
       <img src="Image_of_corpus.png" alt="A grid collage of images from the craft and prototyping corpus"
@@ -634,7 +631,7 @@
     </ul>
     <p style="margin-top:30px;">CompSci for Designers 2 · MA Design for Digital Futures · TH Nürnberg · Summer 2026</p>
 
-   <p class="mono" style="margin-top:24px; font-size:12px; color:var(--graphite); border-top:1px dashed var(--rule); padding-top:20px;">
+    <p class="mono" style="margin-top:24px; font-size:12px; color:var(--graphite); border-top:1px dashed var(--rule); padding-top:20px;">
       AI assistance statement: Claude (Anthropic) was used to help debug the notebook's generation pipeline,
       draft and structure this documentation page, and organize the retrieval atlas and mis-seeing dossier
       from my own test results and screenshots. All queries, corpus curation, testing, and analysis of what
